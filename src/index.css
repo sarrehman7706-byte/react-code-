@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: "Poppins", sans-serif;
+background: #0f0f14;
+color: #ffffff;
+min-height: 100vh;
+}
+
+button {
+font-family: inherit;
+}
+
+/* =========================
+MAIN APP
+========================= */
+
+.app {
+min-height: 100vh;
+background:
+radial-gradient(circle at 10% 10%, rgba(131, 58, 180, 0.18), transparent 30%),
+radial-gradient(circle at 90% 20%, rgba(225, 48, 108, 0.15), transparent 30%),
+radial-gradient(circle at 50% 100%, rgba(252, 175, 69, 0.10), transparent 35%),
+#0f0f14;
+padding-bottom: 60px;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.app-header {
+text-align: center;
+padding: 55px 20px 45px;
+}
+
+.app-header h1 {
+font-size: 42px;
+font-weight: 700;
+background: linear-gradient(
+45deg,
+#feda75,
+#fa7e1e,
+#d62976,
+#962fbf,
+#4f5bd5
+);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+margin-bottom: 10px;
+}
+
+.app-header p {
+color: #aaa;
+font-size: 15px;
+}
+
+/* =========================
+TASK SECTION
+========================= */
+
+.task-section {
+width: 92%;
+max-width: 1050px;
+margin: 30px auto;
+padding: 30px;
+background: rgba(255, 255, 255, 0.045);
+border: 1px solid rgba(255, 255, 255, 0.09);
+border-radius: 22px;
+backdrop-filter: blur(15px);
+box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+}
+
+.task-section > h1 {
+font-size: 24px;
+margin-bottom: 25px;
+}
+
+/* =========================
+TASK 1 - PRODUCTS
+========================= */
+
+.product-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 20px;
+}
+
+.product-card {
+position: relative;
+padding: 25px;
+border-radius: 18px;
+background: linear-gradient(
+145deg,
+rgba(255, 255, 255, 0.09),
+rgba(255, 255, 255, 0.035)
+);
+border: 1px solid rgba(255, 255, 255, 0.1);
+transition: 0.3s ease;
+overflow: hidden;
+}
+
+.product-card::before {
+content: "";
+position: absolute;
+width: 100px;
+height: 100px;
+background: #d62976;
+filter: blur(70px);
+opacity: 0.35;
+top: -30px;
+right: -30px;
+}
+
+.product-card:hover {
+transform: translateY(-6px);
+border-color: rgba(214, 41, 118, 0.5);
+box-shadow: 0 15px 35px rgba(214, 41, 118, 0.12);
+}
+
+.product-card h2 {
+margin-bottom: 15px;
+font-size: 21px;
+}
+
+.product-card p {
+color: #aaa;
+margin: 8px 0;
+}
+
+.product-card strong {
+color: white;
+}
+
+/* =========================
+TASK 2 - LIKE BUTTON
+========================= */
+
+.like-box {
+text-align: center;
+padding: 35px;
+border-radius: 18px;
+background: linear-gradient(
+145deg,
+rgba(255, 255, 255, 0.08),
+rgba(255, 255, 255, 0.025)
+);
+border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.like-box h2 {
+margin-bottom: 15px;
+}
+
+.like-box p {
+color: #aaa;
+margin-bottom: 22px;
+}
+
+.like-box strong {
+color: white;
+font-size: 20px;
+}
+
+.like-box button {
+border: none;
+padding: 12px 28px;
+border-radius: 30px;
+color: white;
+font-size: 15px;
+font-weight: 600;
+cursor: pointer;
+
+background: linear-gradient(
+45deg,
+#feda75,
+#fa7e1e,
+#d62976,
+#962fbf
+);
+
+box-shadow: 0 8px 25px rgba(214, 41, 118, 0.25);
+transition: 0.25s ease;
+}
+
+.like-box button:hover {
+transform: scale(1.06);
+box-shadow: 0 12px 30px rgba(214, 41, 118, 0.4);
+}
+
+.like-box button:active {
+transform: scale(0.95);
+}
+
+/* =========================
+TASK 3 - STUDENTS
+========================= */
+
+.student-list {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+
+.student-card {
+padding: 22px;
+border-radius: 18px;
+background: rgba(255, 255, 255, 0.045);
+border: 1px solid rgba(255, 255, 255, 0.08);
+transition: 0.3s ease;
+}
+
+.student-card:hover {
+transform: translateY(-5px);
+background: rgba(255, 255, 255, 0.07);
+}
+
+.student-card h2 {
+margin-bottom: 10px;
+}
+
+.student-card p {
+color: #aaa;
+margin: 8px 0;
+}
+
+.student-card strong {
+color: white;
+}
+
+.pass {
+color: #35d07f !important;
+font-weight: 600;
+}
+
+.fail {
+color: #ff4d6d !important;
+font-weight: 600;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 600px) {
+.app-header h1 {
+font-size: 32px;
+}
+
+.task-section {
+width: 94%;
+padding: 22px;
+}
+
+.task-section > h1 {
+font-size: 20px;
+}
+}
